@@ -31,10 +31,10 @@ public class PlayerMove : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		float h = Input.GetAxis("H" + joystickId.ToString());
-		float v = Input.GetAxis("V" + joystickId.ToString());
+        float h = ControllerManager.Instance.Horizontal[joystickId - 1];
+		float v = ControllerManager.Instance.Vertical[joystickId - 1];
 
-		bool moveUp 	 = (v > 0) ? true : false;
+        bool moveUp 	 = (v > 0) ? true : false;
 		bool moveRight = (h > 0) ? true : false;
 
 		if(h == 0 && v == 0) setAnimation("idle");
