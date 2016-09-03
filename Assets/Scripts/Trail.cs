@@ -32,12 +32,12 @@ public class Trail : MonoBehaviour
 
         Vector2 segment1 = new Vector2(wFirstPos.x - pos.x, wFirstPos.y - pos.y);
 
-        for (int i = 0; i < waypoints.Count - 2; i++)
+        for (int i = waypoints.Count - 2; i > 0; i--)
         {
             Waypoint w = (Waypoint)waypoints[i];
             Vector2 wPos = w.position;
 
-            Waypoint wNext = (Waypoint)waypoints[i + 1];
+            Waypoint wNext = (Waypoint)waypoints[i - 1];
             Vector2 wNextPos = wNext.position;
 
             Vector2 segment2 = new Vector2(wNextPos.x - wPos.x, wNextPos.y - wPos.y);
@@ -49,6 +49,18 @@ public class Trail : MonoBehaviour
 
             if(s >= 0 && s <= 1 && t >= 0 && t <= 1)
             {
+                int length = waypoints.Count - i;
+                Vector2[] points = new Vector2[length];
+                int p = 0;
+                for(int j = i; j < waypoints.Count; j++)
+                {
+                    Waypoint waypoint = (Waypoint)waypoints[j];
+                    points[p] = waypoint.position;
+                    p++;
+                }
+                GameManager.Instance.boardManager.CreateCutout(points);
+
+
                 waypoints.Clear();
                 break;
             }
