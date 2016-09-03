@@ -37,11 +37,11 @@ public class CharacterSelect : MonoBehaviour {
                     {
                         players[j] = characters[j];
                     }
-                    this.gameObject.SetActive(false);
-                    GameManager.Instance.StartGame(players);
-                    return;
                 }
-                
+
+                this.gameObject.SetActive(false);
+                GameManager.Instance.StartGame(players);
+                return;
             }
         }
 	}

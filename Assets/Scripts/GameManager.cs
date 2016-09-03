@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour {
 
         this.players = new GameObject[players.Length];
 
-        for(uint i = 0; i < players.Length; i++)
+        for(int i = 0; i < players.Length; i++)
         {
             if(players[i] != null)
             {
@@ -56,5 +56,12 @@ public class GameManager : MonoBehaviour {
                 this.players[i] = t.gameObject;
             }
         }
+    }
+
+    public void KillPlayer(int id)
+    {
+        GameObject player = players[id];
+        Destroy(player);
+        players[id] = null;
     }
 }

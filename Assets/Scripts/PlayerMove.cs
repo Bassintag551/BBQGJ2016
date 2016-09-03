@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerMove : MonoBehaviour {
-	public uint joystickId = 1;
+	public int joystickId = 1;
 	public int speed = 1;
 
     public float angle { private set; get; }
@@ -58,4 +58,10 @@ public class PlayerMove : MonoBehaviour {
 			currentTrigger = trigger;
 		}
 	}
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Cutout")
+            GameManager.Instance.KillPlayer(joystickId - 1);
+    }
 }
