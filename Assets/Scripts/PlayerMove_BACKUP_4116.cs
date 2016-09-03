@@ -31,9 +31,12 @@ public class PlayerMove : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		float h = Input.GetAxis("H" + joystickId.ToString());
-		float v = Input.GetAxis("V" + joystickId.ToString());
+        float h = ControllerManager.Instance.Horizontal[joystickId - 1];
+		float v = ControllerManager.Instance.Vertical[joystickId - 1];
 
+<<<<<<< HEAD
+        movement = new Vector3(h, v, 0);
+=======
 		bool moveUp 	 = (v > 0) ? true : false;
 		bool moveRight = (h > 0) ? true : false;
 
@@ -44,6 +47,7 @@ public class PlayerMove : MonoBehaviour {
 		else if(!moveUp && !moveRight) setAnimation("GoLB");
 
 		movement = new Vector3(h, v, 0);
+>>>>>>> f453064acd746651d2a1ca4b5ef9c5e49b4d3693
 		movement.Normalize();
 
 		rigidbody.velocity = rigidbody.velocity * .99f;
