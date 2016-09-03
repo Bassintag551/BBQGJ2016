@@ -12,6 +12,9 @@ public class Trail : MonoBehaviour
     void Start()
     {
         waypoints = new ArrayList();
+        TrailRenderer trail = GetComponent<TrailRenderer>();
+        trail.sortingLayerName = "Trail";
+        trail.time = timeAlive;
     }
 
     void FixedUpdate()

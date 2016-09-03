@@ -10,10 +10,10 @@ public class PlayerMove : MonoBehaviour {
 	private Vector3 movement;
 
 	void FixedUpdate() {
-		float h = Input.GetAxis("H" + joystickId.ToString());
-		float v = Input.GetAxis("V" + joystickId.ToString());
+        float h = ControllerManager.Instance.Horizontal[joystickId - 1];
+		float v = ControllerManager.Instance.Vertical[joystickId - 1];
 
-		movement = new Vector3(h, v, 0);
+        movement = new Vector3(h, v, 0);
 		movement.Normalize();
 
         angle = Vector3.Angle(Vector3.up, movement);

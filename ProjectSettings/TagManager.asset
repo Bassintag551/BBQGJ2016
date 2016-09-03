@@ -44,6 +44,12 @@ TagManager:
   - name: Board
     uniqueID: 4096604513
     locked: 0
+  - name: Trail
+    uniqueID: 746641521
+    locked: 0
   - name: Player
     uniqueID: 1741690317
+    locked: 0
+  - name: FX
+    uniqueID: 1954730241
     locked: 0

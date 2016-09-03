@@ -7,11 +7,23 @@ public class GameManager : MonoBehaviour {
 
     public Camera mainCamera;
 
-    public int players { private set; get; }
+    public GameObject[] players { private set; get; }
+
+    public Transform[] spawnpoints = new Transform[4]; 
 
     public bool paused { set; get; }
 
     public BoardManager boardManager { private set; get; }
+
+    public Status status { private set; get; }
+
+    public enum Status
+    {
+        COUNTDOWN,
+        STARTED,
+        ENDING,
+        PAUSED
+    }
 
     void Awake()
     {
@@ -24,11 +36,16 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
         boardManager = GetComponent<BoardManager>();
+        status = Status.PAUSED;
 	}
 
-    public void StartGame(int numPlayers)
+    public void StartGame(Transform[] players)
     {
-        this.players = numPlayers;
-        
+        this.players = new GameObject[players.Length];
+
+        for(int i = 0; i < players.Length; i++)
+        {
+            this.players[i] = Instantiate(players[i]).gameObject;
+        }
     }
 }
