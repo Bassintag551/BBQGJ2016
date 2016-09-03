@@ -8,14 +8,21 @@ public class PlayerMove : MonoBehaviour {
 	private Vector3 movement;
 	private int slipEffect = 0;
 
-	void OnTriggerEnter2D(Collider2D collider) {
-		if(collider.GetComponent<Slip>()) slipEffect = collider.GetComponent<Slip>().coefficient;
+	private Rigidbody2D rigidbody;
 
+	void Start() {
+		rigidbody = GetComponent<Rigidbody2D>();
 	}
 
-	void OnTriggerExit2D() {
-		slipEffect = 0;
-		GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+	void OnTriggerEnter2D(Collider2D collider) {
+		if(collider.GetComponent<Slip>()) slipEffect = collider.GetComponent<Slip>().coefficient;
+	}
+
+	void OnTriggerExit2D(Collider2D collider) {
+		if(collider.GetComponent<Slip>()) {
+			slipEffect = 0;
+			rigidbody.velocity = new Vector3(0, 0, 0);
+		}
 	}
 
 	void FixedUpdate() {
@@ -25,7 +32,9 @@ public class PlayerMove : MonoBehaviour {
 		movement = new Vector3(h, v, 0);
 		movement.Normalize();
 
-		if(slipEffect != 0) GetComponent<Rigidbody2D>().AddForce(movement * Time.deltaTime * slipEffect);
+		rigidbody.velocity = rigidbody.velocity * .99f;
+
+		if(slipEffect != 0) rigidbody.AddForce(movement * Time.deltaTime * slipEffect);
 
 		transform.Translate(movement * speed * Time.deltaTime);
 	}
