@@ -5,7 +5,7 @@ public class ControllerManager : MonoBehaviour
 {
 
     public bool[] Active { get; private set; }
-    
+
     public bool[] A { get; private set; }
     public bool[] B { get; private set; }
     public bool[] X { get; private set; }
@@ -26,7 +26,7 @@ public class ControllerManager : MonoBehaviour
     {
         if (Instance != null) Destroy(this.gameObject);
         Instance = this;
-        
+
         DontDestroyOnLoad(this);
 
         Active = new bool[4];
@@ -46,8 +46,6 @@ public class ControllerManager : MonoBehaviour
 
     void Update()
     {
-
-        Debug.Log(this.A[0] + " " + this.A[1] + " " + this.A[2] + " " + this.A[3]);
         for (int i = 0; i < 2; i++)
         {
             int id = i + 1;
