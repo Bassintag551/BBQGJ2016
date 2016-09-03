@@ -46,7 +46,6 @@ public class ControllerManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Active[0] + " " + Active[1]);
 
         for (int i = 0; i < 2; i++)
         {
