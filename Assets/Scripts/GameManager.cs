@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     public GameObject[] players { private set; get; }
 
-    public Transform[] spawnpoints = new Transform[4]; 
+    public Vector2[] spawnpoints = new Vector2[4]; 
 
     public bool paused { set; get; }
 
