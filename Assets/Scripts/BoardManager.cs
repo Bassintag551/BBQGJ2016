@@ -18,11 +18,7 @@ public class BoardManager : MonoBehaviour {
 
     private GameObject pizza;
 
-    void Start() {
-        setupPizza();
-    }
-
-    void setupPizza()
+    public void setupPizza()
     {
         GameManager gameManager = GetComponent<GameManager>();
         pizza = Instantiate(pizzaPrefab);

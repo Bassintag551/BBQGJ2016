@@ -1,28 +1,47 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelect : MonoBehaviour {
     
-    public Texture2D[] charactersIcons;
     public Transform[] characters;
-    private bool[] selected;
+    private bool[] wasActive;
     public RawImage[] selectors;
-
-	// Use this for initialization
+    
 	void Start () {
-        selected = new bool[4];
+        wasActive = new bool[4];
+        foreach(RawImage img in selectors)
+        {
+            img.color = Color.black;
+        }
 	}
 	
-	// Update is called once per frame
 	void Update () {
         for (int i = 0; i < 4; i++)
         {
             bool b = ControllerManager.Instance.Active[i];
             if (!b)
                 continue;
-            else if (ControllerManager.Instance.A[i])
+            else if (!wasActive[i])
             {
-                selected[i] = true;
+                selectors[i].color = Color.white;
+                wasActive[i] = true;
+            }
+            
+            if (ControllerManager.Instance.Y[i])
+            {
+                Transform[] players = new Transform[4];
+                for(int j = 0; j < players.Length; j++)
+                {
+                    if (wasActive[j])
+                    {
+                        players[j] = characters[j];
+                    }
+                    this.gameObject.SetActive(false);
+                    GameManager.Instance.StartGame(players);
+                    return;
+                }
+                
             }
         }
 	}

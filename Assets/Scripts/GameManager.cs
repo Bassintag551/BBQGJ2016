@@ -41,11 +41,20 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame(Transform[] players)
     {
+        boardManager.setupPizza();
+
         this.players = new GameObject[players.Length];
 
-        for(int i = 0; i < players.Length; i++)
+        for(uint i = 0; i < players.Length; i++)
         {
-            this.players[i] = Instantiate(players[i]).gameObject;
+            if(players[i] != null)
+            {
+                Transform t = Instantiate(players[i]);
+                t.GetComponent<PlayerMove>().joystickId = i + 1;
+                t.position = spawnpoints[i];
+                t.name = "Player " + i;
+                this.players[i] = t.gameObject;
+            }
         }
     }
 }

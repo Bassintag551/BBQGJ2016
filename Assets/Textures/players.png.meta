@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: c8413e083dd9811419ab2890a799fa1e
-timeCreated: 1472939437
+guid: 4053a8c1091bc9e4d827e3b899f77328
+timeCreated: 1472941934
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: playerLeftTop_0
-    21300002: playerLeftTop_1
+    21300000: players_0
+    21300002: players_1
+    21300004: players_2
+    21300006: players_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,12 +37,12 @@ TextureImporter:
     aniso: 16
     mipBias: -1
     wrapMode: 1
-  nPOTScale: 0
+  nPOTScale: 1
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 2
+  spriteMode: 0
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,32 +51,58 @@ TextureImporter:
   spritePixelsToUnits: 512
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerLeftTop_0
+      name: players_0
       rect:
         serializedVersion: 2
-        x: 76
-        y: 55
-        width: 361
-        height: 424
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: playerLeftTop_1
+      name: players_1
       rect:
         serializedVersion: 2
-        x: 588
-        y: 48
-        width: 361
-        height: 431
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: players_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: players_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -46,10 +46,8 @@ public class PlayerMove : MonoBehaviour {
 		movement = new Vector3(h, v, 0);
 		movement.Normalize();
 
-		rigidbody.velocity = rigidbody.velocity * .99f;
-
 		if(slipEffect != 0) rigidbody.AddForce(movement * Time.deltaTime * slipEffect);
-    angle = Vector3.Angle(Vector3.up, movement);
+        angle = Vector3.Angle(Vector3.up, movement);
 
 		transform.Translate(movement * speed * Time.deltaTime);
 	}
