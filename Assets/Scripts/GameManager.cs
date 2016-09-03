@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
 
     public bool paused { set; get; }
 
-    private BoardManager boardManager;
+    public BoardManager boardManager { private set; get; }
 
     void Awake()
     {

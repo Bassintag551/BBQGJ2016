@@ -4,6 +4,8 @@ using System.Collections;
 
 public class BoardManager : MonoBehaviour {
 
+    public Transform cutoutMesh;
+
     public float pizzaRadius { private set; get; }
 
     public GameObject pizzaPrefab;
@@ -14,9 +16,16 @@ public class BoardManager : MonoBehaviour {
 
     private GameManager gameManager;
 
+    private GameObject pizza;
+
     void Start() {
+        setupPizza();
+    }
+
+    void setupPizza()
+    {
         GameManager gameManager = GetComponent<GameManager>();
-        GameObject pizza = Instantiate(pizzaPrefab);
+        pizza = Instantiate(pizzaPrefab);
         pizza.name = "Pizza";
 
         SpriteRenderer pizzaSpriteRenderer = pizza.GetComponent<SpriteRenderer>();
@@ -38,6 +47,43 @@ public class BoardManager : MonoBehaviour {
         maskMaterial = pizzaSpriteRenderer.material;
 
         maskMaterial.SetTexture("_Alpha", mask);
+    }
+
+    public void CreateCutout(Vector2[] points)
+    {
+        Transform cutout = Instantiate(cutoutMesh);
+
+        cutout.name = "Cutout";
+        cutout.parent = pizza.transform;
+
+        PolygonCollider2D collider = cutout.GetComponent<PolygonCollider2D>();
+        collider.SetPath(0, points);
+
+        MeshFilter filter = cutout.GetComponent<MeshFilter>();
+
+        Mesh mesh = new Mesh();
+
+        Triangulator tr = new Triangulator(points);
+        int[] indices = tr.Triangulate();
+
+        Vector3[] vertices = new Vector3[points.Length];
+        Vector2[] uvs = new Vector2[points.Length];
+        Sprite pizzaSprite = pizza.GetComponent<SpriteRenderer>().sprite;
+        for (int i = 0; i < points.Length; i++)
+        {
+            Vector3 vert = points[i];
+            vertices[i] = new Vector3(vert.x, vert.y, -.1f);
+            Vector2 size = pizzaSprite.bounds.size;
+            uvs[i] = new Vector2((vert.x + size.x / 2) / size.x, (vert.y + size.y / 2) / size.y);
+        }
+
+        mesh.vertices = vertices;
+        mesh.triangles = indices;
+        mesh.uv = uvs;
+        mesh.RecalculateBounds();
+        mesh.RecalculateNormals();
+
+        filter.mesh = mesh;
     }
 
     void OnDrawGizmos()
