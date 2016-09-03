@@ -13,6 +13,11 @@ public class CharacterSelect : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        foreach(bool b in ControllerManager.Instance.Active)
+        {
+            if (!b)
+                continue;
 
+        }
 	}
 }
