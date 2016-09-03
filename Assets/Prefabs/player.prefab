@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 114000013668677840}
   - 50: {fileID: 50000013284919524}
   - 60: {fileID: 60000013310311974}
+  - 95: {fileID: 95000012753615136}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -83,6 +84,23 @@ PolygonCollider2D:
       - {x: 0.099999994, y: -0.074999996}
       - {x: 0.099999994, y: 0.055}
       - {x: 0.049999997, y: 0.099999994}
+--- !u!95 &95000012753615136
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013701578312}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17dc6cd7254fa7e45b444f8bec0ed282, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000013668677840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystickId: 1
-  speed: 1
+  speed: 5
 --- !u!212 &212000010452235474
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -125,7 +143,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d947bee3e352a354ca5a404220bcfd0f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

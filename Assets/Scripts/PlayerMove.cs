@@ -7,11 +7,14 @@ public class PlayerMove : MonoBehaviour {
 
 	private Vector3 movement;
 	private int slipEffect = 0;
+	private string currentTrigger = "idle";
 
 	private Rigidbody2D rigidbody;
+	private Animator animator;
 
 	void Start() {
 		rigidbody = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
@@ -29,6 +32,15 @@ public class PlayerMove : MonoBehaviour {
 		float h = Input.GetAxis("H" + joystickId.ToString());
 		float v = Input.GetAxis("V" + joystickId.ToString());
 
+		bool moveUp 	 = (v > 0) ? true : false;
+		bool moveRight = (h > 0) ? true : false;
+
+		if(h == 0 && v == 0) setAnimation("idle");
+		else if(moveUp && moveRight) setAnimation("GoRT");
+		else if(moveUp && !moveRight) setAnimation("GoLT");
+		else if(!moveUp && moveRight) setAnimation("GoRB");
+		else if(!moveUp && !moveRight) setAnimation("GoLB");
+
 		movement = new Vector3(h, v, 0);
 		movement.Normalize();
 
@@ -37,5 +49,12 @@ public class PlayerMove : MonoBehaviour {
 		if(slipEffect != 0) rigidbody.AddForce(movement * Time.deltaTime * slipEffect);
 
 		transform.Translate(movement * speed * Time.deltaTime);
+	}
+
+	void setAnimation(string trigger) {
+		if(currentTrigger != trigger) {
+			animator.SetTrigger(trigger);
+			currentTrigger = trigger;
+		}
 	}
 }
