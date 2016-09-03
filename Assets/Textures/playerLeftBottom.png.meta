@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d947bee3e352a354ca5a404220bcfd0f
-timeCreated: 1472926234
+timeCreated: 1472939422
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,12 +58,12 @@ TextureImporter:
       name: playerLeftBottom_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 1
-        width: 145
-        height: 188
+        x: 76
+        y: 8
+        width: 361
+        height: 471
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -71,12 +71,12 @@ TextureImporter:
       name: playerLeftBottom_1
       rect:
         serializedVersion: 2
-        x: 228
-        y: 1
-        width: 145
-        height: 188
+        x: 588
+        y: 8
+        width: 361
+        height: 471
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
