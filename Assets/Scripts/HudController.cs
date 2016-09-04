@@ -7,6 +7,6 @@ public class HudController : MonoBehaviour {
 
     public void setAlive(bool alive, int id)
     {
-        playerHealthBarControllers[id].setAlive(alive);
+        playerHealthBarControllers[id].kill();
     }
 }

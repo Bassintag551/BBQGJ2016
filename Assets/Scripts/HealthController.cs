@@ -11,4 +11,8 @@ public class HealthController : MonoBehaviour {
         aliveObject.SetActive(alive);
         deadObject.SetActive(!alive);
     }
+
+    public void kill() {
+      deadObject.SetActive(true);
+    }
 }
