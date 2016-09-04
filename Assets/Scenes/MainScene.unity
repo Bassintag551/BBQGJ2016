@@ -496,18 +496,6 @@ Prefab:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 1456039039}
-    - target: {fileID: 114000010331535992, guid: 6c864ad16108a3b4c8c0fd284a6e785d,
-        type: 2}
-      propertyPath: powerups.Array.data[1]
-      value: 
-      objectReference: {fileID: 4000013923910534, guid: 8f0ce868e222fbb438978f00aa4da395,
-        type: 2}
-    - target: {fileID: 114000010331535992, guid: 6c864ad16108a3b4c8c0fd284a6e785d,
-        type: 2}
-      propertyPath: powerups.Array.data[2]
-      value: 
-      objectReference: {fileID: 4000011906648032, guid: 3294d3c569e41e34cb7e7558ee2547ca,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c864ad16108a3b4c8c0fd284a6e785d, type: 2}
   m_IsPrefabParent: 0
