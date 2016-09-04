@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour {
         {
             if(players[i] != null)
             {
+                HUD.GetComponent<HudController>().playerHealthBarControllers[i].show();
                 Transform t = Instantiate(samplePlayer);
                 t.GetComponent<PlayerMove>().joystickId = i + 1;
                 t.GetComponent<Animator>().runtimeAnimatorController = players[i];
