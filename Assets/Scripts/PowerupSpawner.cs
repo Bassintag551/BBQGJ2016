@@ -26,10 +26,10 @@ public class PowerupSpawner : MonoBehaviour {
         nextSpawn -= Time.deltaTime;
         if(nextSpawn <= 0)
         {
-            float sin = Random.Range(-1, 1);
-            float cos = Random.Range(-1, 1);
+            float sin = Random.Range(-1f, 1f);
+            float cos = Random.Range(-1f, 1f);
 
-            float factor = Random.Range(0, radius);
+            float factor = Random.Range(0f, radius);
 
             Vector2 pos = new Vector2(sin, cos);
             pos.Normalize();

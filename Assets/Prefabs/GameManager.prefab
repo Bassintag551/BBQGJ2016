@@ -56,6 +56,8 @@ MonoBehaviour:
   radius: 4
   timeBetweenSpawns: 8
   variance: 3
+  powerups:
+  - {fileID: 4000013273661212, guid: 9f1e654210b0d3a4aaaa040c474e29a7, type: 2}
 --- !u!114 &114000011825014996
 MonoBehaviour:
   m_ObjectHideFlags: 1
