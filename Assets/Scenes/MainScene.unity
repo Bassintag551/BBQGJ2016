@@ -328,6 +328,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000010331535992, guid: 6c864ad16108a3b4c8c0fd284a6e785d,
+        type: 2}
+      propertyPath: powerups.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014154705778, guid: 6c864ad16108a3b4c8c0fd284a6e785d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -375,6 +380,18 @@ Prefab:
       propertyPath: timeBetweenSpawns
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010331535992, guid: 6c864ad16108a3b4c8c0fd284a6e785d,
+        type: 2}
+      propertyPath: powerups.Array.data[3]
+      value: 
+      objectReference: {fileID: 4000011906648032, guid: 3294d3c569e41e34cb7e7558ee2547ca,
+        type: 2}
+    - target: {fileID: 114000010331535992, guid: 6c864ad16108a3b4c8c0fd284a6e785d,
+        type: 2}
+      propertyPath: powerups.Array.data[4]
+      value: 
+      objectReference: {fileID: 4000011931866248, guid: 2b9088665005b8f4abbf036c2304e0e3,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c864ad16108a3b4c8c0fd284a6e785d, type: 2}
   m_IsPrefabParent: 0

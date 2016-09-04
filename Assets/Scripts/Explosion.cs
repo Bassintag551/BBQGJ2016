@@ -16,9 +16,9 @@ public class Explosion : MonoBehaviour {
 			Vector3 blow = collider.GetComponent<Transform>().position - transform.position;
 			blow.Normalize();
 
-			float percentage = (radius - Mathf.Sqrt(blow.x*blow.x + blow.y*blow.y)) / radius;
+			/*float percentage = (radius - Mathf.Sqrt(blow.x*blow.x + blow.y*blow.y)) / radius;
 
-			rigidbody.AddForce(blow * strength * percentage);
+			rigidbody.AddForce(blow * strength * percentage);*/
 
 			GetComponent<CircleCollider2D>().enabled = false;
 		}
