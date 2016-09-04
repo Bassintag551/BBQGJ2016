@@ -9,7 +9,7 @@ public class Chorizo : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.GetComponent<PlayerMove>())
+        if (collider.GetComponent<PlayerMove>() && activated)
         {
             Destroy(gameObject);
             GameManager.Instance.mainCamera.GetComponent<CameraShader>().setShader(shader, 5);
@@ -24,7 +24,6 @@ public class Chorizo : MonoBehaviour {
         if (!activated && GetComponent<Fall>() && GetComponent<Fall>().ready)
         {
             activated = true;
-            Destroy(gameObject, .1f);
         }
     }
 }
