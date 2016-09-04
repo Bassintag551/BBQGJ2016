@@ -45,9 +45,11 @@ public class BoardManager : MonoBehaviour {
         maskMaterial.SetTexture("_Alpha", mask);
     }
 
-    public void CreateCutout(Vector2[] points)
+    public void CreateCutout(Vector2[] points, PlayerMove owner)
     {
         Transform cutout = Instantiate(cutoutMesh);
+
+        cutout.GetComponent<Cutout>().owner = owner;
 
         cutout.name = "Cutout";
         cutout.parent = pizza.transform;

@@ -27,7 +27,7 @@ GameObject:
   - 114: {fileID: 114000011895691340}
   - 96: {fileID: 96000013482353836}
   m_Layer: 0
-  m_Name: PlayerSample
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
