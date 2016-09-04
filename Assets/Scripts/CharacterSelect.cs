@@ -3,11 +3,11 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class CharacterSelect : MonoBehaviour {
-    
+
     public Transform[] characters;
     private bool[] wasActive;
     public RawImage[] selectors;
-    
+
 	void Start () {
         wasActive = new bool[4];
         foreach(RawImage img in selectors)
@@ -27,7 +27,7 @@ public class CharacterSelect : MonoBehaviour {
                 selectors[i].color = Color.white;
                 wasActive[i] = true;
             }
-            
+
             if (ControllerManager.Instance.Y[i])
             {
                 Transform[] players = new Transform[4];

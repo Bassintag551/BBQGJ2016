@@ -40,8 +40,6 @@ public class ControllerManager : MonoBehaviour
         Vertical = new float[4];
         AimHorizontal = new float[4];
         AimVertical = new float[4];
-
-        Active[0] = true;
     }
 
     void Update()
