@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager Instance;
 
+    public Transform background;
+
     public Transform samplePlayer;
 
     public Camera mainCamera;
@@ -65,6 +67,9 @@ public class GameManager : MonoBehaviour {
                 this.players[i] = t.gameObject;
             }
         }
+
+        Transform bg = Instantiate(background);
+        bg.name = "Background";
     }
 
     public void KillPlayer(int id)
