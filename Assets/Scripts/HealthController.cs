@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class HealthController : MonoBehaviour {
-
     public GameObject aliveObject;
     public GameObject deadObject;
 
@@ -14,5 +13,9 @@ public class HealthController : MonoBehaviour {
 
     public void kill() {
       deadObject.SetActive(true);
+    }
+
+    public void show() {
+      aliveObject.SetActive(true);
     }
 }
