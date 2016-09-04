@@ -58,6 +58,8 @@ MonoBehaviour:
   variance: 3
   powerups:
   - {fileID: 4000013273661212, guid: 9f1e654210b0d3a4aaaa040c474e29a7, type: 2}
+  - {fileID: 4000013923910534, guid: 8f0ce868e222fbb438978f00aa4da395, type: 2}
+  - {fileID: 4000012878521854, guid: 36ea605211152fa4eae25180fe057e84, type: 2}
 --- !u!114 &114000011825014996
 MonoBehaviour:
   m_ObjectHideFlags: 1
