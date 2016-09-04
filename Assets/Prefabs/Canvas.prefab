@@ -25,7 +25,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000010304158038
 GameObject:
   m_ObjectHideFlags: 1
@@ -58,7 +58,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000010590882380
 GameObject:
   m_ObjectHideFlags: 1
@@ -125,7 +125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000010988531316
 GameObject:
   m_ObjectHideFlags: 1
@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000010993632978
 GameObject:
   m_ObjectHideFlags: 1
@@ -177,7 +177,7 @@ GameObject:
   m_IsActive: 0
 --- !u!1 &1000011151639300
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -207,7 +207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000011253754016
 GameObject:
   m_ObjectHideFlags: 1
@@ -223,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000011362586428
 GameObject:
   m_ObjectHideFlags: 1
@@ -287,7 +287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000011637964956
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000012376669588
 GameObject:
   m_ObjectHideFlags: 1
@@ -744,9 +744,9 @@ MonoBehaviour:
   m_Texture: {fileID: 2800000, guid: 706b5dee2e85dae42a4a9d48c6b5e0b8, type: 3}
   m_UVRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0.5
-    width: 0.5
+    width: -0.5
     height: 0.5
 --- !u!114 &114000011466204486
 MonoBehaviour:
@@ -817,9 +817,9 @@ MonoBehaviour:
   m_Texture: {fileID: 2800000, guid: 706b5dee2e85dae42a4a9d48c6b5e0b8, type: 3}
   m_UVRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0
-    width: 0.5
+    width: -0.5
     height: 0.5
 --- !u!114 &114000011551757652
 MonoBehaviour:
@@ -1669,16 +1669,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011151639300}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 224000013568901516}
-  m_RootOrder: 2
+  m_Father: {fileID: 224000011364930404}
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28, y: 0.000014782}
+  m_AnchoredPosition: {x: -31.11114, y: 34.444443}
   m_SizeDelta: {x: 245, y: 205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000011139297458
@@ -1732,6 +1732,7 @@ RectTransform:
   - {fileID: 224000013292852922}
   - {fileID: 224000010672409896}
   - {fileID: 224000012162806650}
+  - {fileID: 224000011058598772}
   m_Father: {fileID: 224000013568901516}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -2020,7 +2021,6 @@ RectTransform:
   m_Children:
   - {fileID: 224000011364930404}
   - {fileID: 224000012167346692}
-  - {fileID: 224000011058598772}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
