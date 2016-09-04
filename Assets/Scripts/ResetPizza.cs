@@ -17,7 +17,7 @@ public class ResetPizza : MonoBehaviour {
 		if(!activated && GetComponent<Fall>() && GetComponent<Fall>().ready) {
 			GetComponent<CircleCollider2D>().enabled = true;
 			activated = true;
-			Destroy(gameObject, .5f);
+			Destroy(gameObject, 2);
 		}
 	}
 

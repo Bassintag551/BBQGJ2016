@@ -16,7 +16,7 @@ public class Chorizo : MonoBehaviour {
         }
 
         if(collider.GetComponent<Cutout>())
-            Destroy(gameObject);
+            Destroy(gameObject, 4);
     }
     
     void FixedUpdate()

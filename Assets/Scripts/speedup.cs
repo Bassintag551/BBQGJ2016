@@ -23,7 +23,7 @@ public class speedup : MonoBehaviour {
 		}
 
 		if(collider.GetComponent<Cutout>()) {
-			Destroy(gameObject);
+			Destroy(gameObject, 4);
 		}
 	}
 
