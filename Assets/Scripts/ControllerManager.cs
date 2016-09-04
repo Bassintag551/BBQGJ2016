@@ -27,7 +27,7 @@ public class ControllerManager : MonoBehaviour
         if (Instance != null) Destroy(this.gameObject);
         Instance = this;
 
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
 
         Active = new bool[4];
         A = new bool[4];

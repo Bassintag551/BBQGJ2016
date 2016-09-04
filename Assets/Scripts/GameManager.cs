@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour {
 
     private bool started;
 
+    private int playerAlive=0;
+
     void Awake()
     {
         if(Instance != null)
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour {
         {
             if(players[i] != null)
             {
+                playerAlive++;
                 HUD.GetComponent<HudController>().playerHealthBarControllers[i].show();
                 Transform t = Instantiate(samplePlayer);
                 t.GetComponent<PlayerMove>().joystickId = i + 1;
@@ -76,8 +79,19 @@ public class GameManager : MonoBehaviour {
         GameObject player = players[id];
         Destroy(player);
         players[id] = null;
+        playerAlive--;
+
+        if(playerAlive <= 1)
+        {
+            gameReset();
+        }
 
         HUD.GetComponent<HudController>().setAlive(false, id);
+    }
+
+    void gameReset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void FixedUpdate()
