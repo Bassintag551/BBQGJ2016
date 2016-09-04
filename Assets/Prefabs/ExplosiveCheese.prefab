@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 4
-  strength: 60
+  strength: 20
 --- !u!212 &212000012982016126
 SpriteRenderer:
   m_ObjectHideFlags: 1

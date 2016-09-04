@@ -83,14 +83,15 @@ public class GameManager : MonoBehaviour {
 
         if(playerAlive <= 1)
         {
-            gameReset();
+            StartCoroutine(gameReset());
         }
 
         HUD.GetComponent<HudController>().setAlive(false, id);
     }
 
-    void gameReset()
+    IEnumerator gameReset()
     {
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
