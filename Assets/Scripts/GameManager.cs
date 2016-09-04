@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour {
 
     public GameObject HUD;
 
+    private bool started;
+
     void Awake()
     {
         if(Instance != null)
@@ -37,6 +39,8 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame(AnimatorController[] players)
     {
+        started = true;
+
         boardManager.setupPizza();
 
         HUD.SetActive(true);
@@ -64,5 +68,19 @@ public class GameManager : MonoBehaviour {
         players[id] = null;
 
         HUD.GetComponent<HudController>().setAlive(false, id);
+    }
+
+    void FixedUpdate()
+    {
+        if(started)
+        for(int i = 0; i < players.Length; i++)
+        {
+            if (!players[i]) continue;
+            Transform player = players[i].transform;
+            if(Vector2.Distance(transform.position, player.position) > boardManager.pizzaRadius)
+            {
+                KillPlayer(i);
+            }
+        }
     }
 }
