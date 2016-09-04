@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000014154705778}
   - 114: {fileID: 114000011825014996}
   - 114: {fileID: 114000013809814952}
+  - 114: {fileID: 114000010331535992}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -41,6 +42,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000010331535992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012080528008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5616fa44857dc8c4ebf5d536f50b5d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 4
+  timeBetweenSpawns: 8
+  variance: 3
 --- !u!114 &114000011825014996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf9ca14762a2f5a4cba285be09425669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  samplePlayer: {fileID: 4000013187893012, guid: 1a74992b014a98e4b88dc5f1dbb1ba2d,
+    type: 2}
   mainCamera: {fileID: 0}
   spawnpoints:
   - {x: -3, y: 3}
