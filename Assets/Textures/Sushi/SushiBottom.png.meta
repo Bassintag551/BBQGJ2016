@@ -1,15 +1,11 @@
 fileFormatVersion: 2
-guid: a683d01d105a5da4dabf29bf5868e076
-timeCreated: 1472974632
+guid: 953b1625d3ad6124db58148e25e26eb9
+timeCreated: 1472973163
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Player2Bottom_0
-    21300002: Player2Bottom_1
-    21300004: Bottom_0
-    21300006: Bottom_1
-    21300008: ChefBottom_0
-    21300010: ChefBottom_1
+    21300000: SushiBottom_0
+    21300002: SushiBottom_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,7 +55,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChefBottom_0
+      name: SushiBottom_0
       rect:
         serializedVersion: 2
         x: 0
@@ -72,7 +68,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ChefBottom_1
+      name: SushiBottom_1
       rect:
         serializedVersion: 2
         x: 512
