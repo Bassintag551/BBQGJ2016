@@ -369,6 +369,12 @@ Prefab:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 2020199288}
+    - target: {fileID: 114000011825014996, guid: 6c864ad16108a3b4c8c0fd284a6e785d,
+        type: 2}
+      propertyPath: samplePlayer
+      value: 
+      objectReference: {fileID: 4000013187893012, guid: 1a74992b014a98e4b88dc5f1dbb1ba2d,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c864ad16108a3b4c8c0fd284a6e785d, type: 2}
   m_IsPrefabParent: 0

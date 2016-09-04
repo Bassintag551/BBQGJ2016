@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor.Animations;
 
 public class CharacterSelect : MonoBehaviour {
-
-    public Transform[] characters;
+    public AnimatorController[] characters;
     private bool[] wasActive;
     public RawImage[] selectors;
 
@@ -15,7 +15,7 @@ public class CharacterSelect : MonoBehaviour {
             img.color = Color.black;
         }
 	}
-	
+
 	void Update () {
         for (int i = 0; i < 4; i++)
         {
@@ -30,7 +30,7 @@ public class CharacterSelect : MonoBehaviour {
 
             if (ControllerManager.Instance.Y[i])
             {
-                Transform[] players = new Transform[4];
+                AnimatorController[] players = new AnimatorController[4];
                 for(int j = 0; j < players.Length; j++)
                 {
                     if (wasActive[j])
