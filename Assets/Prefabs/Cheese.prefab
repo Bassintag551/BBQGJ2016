@@ -25,7 +25,7 @@ GameObject:
   - 50: {fileID: 50000010184093714}
   - 114: {fileID: 114000010329095042}
   m_Layer: 0
-  m_Name: ResetCheese
+  m_Name: Cheese
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
