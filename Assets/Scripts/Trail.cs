@@ -9,10 +9,17 @@ public class Trail : MonoBehaviour
 
     public float gapBetweenPoints = .1f;
 
+    public Color[] colors = new Color[4];
+
     void Start()
     {
         waypoints = new ArrayList();
         TrailRenderer trail = GetComponent<TrailRenderer>();
+        int id = GetComponent<PlayerMove>().joystickId;
+
+        Color c = colors[id - 1];
+        trail.material.SetColor("_Color", c);
+
         trail.sortingLayerName = "Trail";
         trail.time = timeAlive;
     }
