@@ -3,9 +3,9 @@ using System.Collections;
 
 public class PlayerMove : MonoBehaviour {
 	public int joystickId = 1;
-	public int speed = 1;
+	public float speed = 1;
 
-    public float angle { private set; get; }
+  public float angle { private set; get; }
 
 	private Vector3 movement;
 	private int slipEffect = 0;

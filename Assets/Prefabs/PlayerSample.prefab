@@ -26,6 +26,7 @@ GameObject:
   - 114: {fileID: 114000011895691340}
   - 96: {fileID: 96000013482353836}
   - 58: {fileID: 58000010881456372}
+  - 58: {fileID: 58000012336921842}
   m_Layer: 0
   m_Name: PlayerSample
   m_TagString: Untagged
@@ -77,6 +78,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.3}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!58 &58000012336921842
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013701578312}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.45996094
 --- !u!95 &95000012753615136
 Animator:
   serializedVersion: 3
@@ -169,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystickId: 1
-  speed: 4
+  speed: 3
 --- !u!212 &212000010452235474
 SpriteRenderer:
   m_ObjectHideFlags: 1
