@@ -449,6 +449,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000010331535992, guid: 6c864ad16108a3b4c8c0fd284a6e785d,
+        type: 2}
+      propertyPath: powerups.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014154705778, guid: 6c864ad16108a3b4c8c0fd284a6e785d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0

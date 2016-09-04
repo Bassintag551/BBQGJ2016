@@ -5,6 +5,8 @@ public class speedup : MonoBehaviour {
 	public float speedMultiplier = 2f;
 	public float duration = 2;
 
+	private bool activated = false;
+
 	private float start = 0;
 	private PlayerMove playerMove;
 
@@ -26,6 +28,11 @@ public class speedup : MonoBehaviour {
 	}
 
 	void Update() {
+		if(!activated && GetComponent<Fall>() && GetComponent<Fall>().ready) {
+			activated = true;
+			GetComponent<CircleCollider2D>().enabled = true;
+		}
+
 		if(start != 0 && Time.time >= start + duration) {
 			playerMove.speed /= speedMultiplier;
 			Destroy(gameObject);

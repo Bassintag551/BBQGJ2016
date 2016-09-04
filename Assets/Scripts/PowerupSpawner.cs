@@ -35,7 +35,7 @@ public class PowerupSpawner : MonoBehaviour {
             pos.Normalize();
             pos = new Vector2(pos.x * factor, pos.y * factor);
 
-            int index = Random.Range(0, powerups.Length - 1);
+            int index = Random.Range(0, powerups.Length);
             Transform powerup = Instantiate(powerups[index]);
             powerup.position = pos;
 
