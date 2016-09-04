@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
 
     public BoardManager boardManager { private set; get; }
 
+    public PowerupSpawner powerupSpawner { private set; get; }
+
     public GameObject HUD;
 
     private bool started;
@@ -35,6 +37,8 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
         boardManager = GetComponent<BoardManager>();
+        powerupSpawner = GetComponent<PowerupSpawner>();
+        powerupSpawner.gameObject.SetActive(false);
 	}
 
     public void StartGame(AnimatorController[] players)
@@ -44,6 +48,7 @@ public class GameManager : MonoBehaviour {
         boardManager.setupPizza();
 
         HUD.SetActive(true);
+        powerupSpawner.gameObject.SetActive(true);
 
         this.players = new GameObject[players.Length];
 
