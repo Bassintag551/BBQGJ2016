@@ -15,15 +15,7 @@ public class GameManager : MonoBehaviour {
 
     public BoardManager boardManager { private set; get; }
 
-    public Status status { private set; get; }
-
-    public enum Status
-    {
-        COUNTDOWN,
-        STARTED,
-        ENDING,
-        PAUSED
-    }
+    public GameObject HUD;
 
     void Awake()
     {
@@ -36,12 +28,13 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
         boardManager = GetComponent<BoardManager>();
-        status = Status.PAUSED;
 	}
 
     public void StartGame(Transform[] players)
     {
         boardManager.setupPizza();
+
+        HUD.SetActive(true);
 
         this.players = new GameObject[players.Length];
 
@@ -63,5 +56,7 @@ public class GameManager : MonoBehaviour {
         GameObject player = players[id];
         Destroy(player);
         players[id] = null;
+
+        HUD.GetComponent<HudController>().setAlive(false, id);
     }
 }

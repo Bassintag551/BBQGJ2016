@@ -61,7 +61,7 @@ public class Trail : MonoBehaviour
                     points[p] = waypoint.position;
                     p++;
                 }
-                GameManager.Instance.boardManager.CreateCutout(points);
+                GameManager.Instance.boardManager.CreateCutout(points, GetComponent<PlayerMove>());
 
 
                 waypoints.Clear();

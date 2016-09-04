@@ -21,7 +21,17 @@ public class PlayerMove : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		if(collider.GetComponent<Slip>()) slipEffect = collider.GetComponent<Slip>().coefficient;
-	}
+
+
+        if (collider.GetComponent<Cutout>())
+        {
+            Cutout cutout = collider.GetComponent<Cutout>();
+            if(cutout.owner != this || cutout.lived > 1)
+            {
+                GameManager.Instance.KillPlayer(joystickId - 1);
+            }
+        }
+    }
 
 	void OnTriggerExit2D(Collider2D collider) {
 		if(collider.GetComponent<Slip>()) {
@@ -58,10 +68,4 @@ public class PlayerMove : MonoBehaviour {
 			currentTrigger = trigger;
 		}
 	}
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "Cutout")
-            GameManager.Instance.KillPlayer(joystickId - 1);
-    }
 }
