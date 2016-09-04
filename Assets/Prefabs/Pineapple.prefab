@@ -23,6 +23,7 @@ GameObject:
   - 58: {fileID: 58000012189723446}
   - 114: {fileID: 114000010235765110}
   - 50: {fileID: 50000012956470500}
+  - 114: {fileID: 114000013262031130}
   m_Layer: 0
   m_Name: Pineapple
   m_TagString: Untagged
@@ -66,7 +67,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011091960554}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -87,6 +88,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMultiplier: 2
   duration: 5
+--- !u!114 &114000013262031130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011091960554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd65288716a873e4788f06c2fcb90a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
+  endScale: 0.5
+  ready: 0
 --- !u!212 &212000013324302990
 SpriteRenderer:
   m_ObjectHideFlags: 1
