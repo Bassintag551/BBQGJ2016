@@ -23,6 +23,7 @@ public class BoardManager : MonoBehaviour {
         GameManager gameManager = GetComponent<GameManager>();
         pizza = Instantiate(pizzaPrefab);
         pizza.name = "Pizza";
+        pizza.transform.position = new Vector3(0, 0, 0.1f);
 
         SpriteRenderer pizzaSpriteRenderer = pizza.GetComponent<SpriteRenderer>();
         Sprite pizzaSprite = pizza.GetComponent<SpriteRenderer>().sprite;
@@ -70,7 +71,7 @@ public class BoardManager : MonoBehaviour {
         for (int i = 0; i < points.Length; i++)
         {
             Vector3 vert = points[i];
-            vertices[i] = new Vector3(vert.x, vert.y, -.1f);
+            vertices[i] = new Vector3(vert.x, vert.y, 0f);
             Vector2 size = pizzaSprite.bounds.size;
             uvs[i] = new Vector2((vert.x + size.x / 2) / size.x, (vert.y + size.y / 2) / size.y);
         }
