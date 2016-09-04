@@ -525,12 +525,6 @@ Prefab:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 1456039039}
-    - target: {fileID: 114000011825014996, guid: 6c864ad16108a3b4c8c0fd284a6e785d,
-        type: 2}
-      propertyPath: background
-      value: 
-      objectReference: {fileID: 4000010952101360, guid: fadce18275074df4e9d64589fe1ee681,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c864ad16108a3b4c8c0fd284a6e785d, type: 2}
   m_IsPrefabParent: 0
