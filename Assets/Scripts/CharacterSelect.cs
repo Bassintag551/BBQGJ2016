@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.Animations;
 
 public class CharacterSelect : MonoBehaviour {
-    public AnimatorController[] characters;
+    public Transform[] characters;
     private bool[] wasActive;
     public RawImage[] selectors;
 
@@ -30,7 +29,7 @@ public class CharacterSelect : MonoBehaviour {
 
             if (ControllerManager.Instance.Y[i])
             {
-                AnimatorController[] players = new AnimatorController[4];
+                Transform[] players = new Transform[4];
                 for(int j = 0; j < players.Length; j++)
                 {
                     if (wasActive[j])

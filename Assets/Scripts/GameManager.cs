@@ -2,7 +2,6 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.Animations;
 
 public class GameManager : MonoBehaviour {
 
@@ -43,7 +42,7 @@ public class GameManager : MonoBehaviour {
         powerupSpawner.gameObject.SetActive(false);
 	}
 
-    public void StartGame(AnimatorController[] players)
+    public void StartGame(Transform[] players)
     {
         started = true;
 
@@ -61,7 +60,7 @@ public class GameManager : MonoBehaviour {
                 HUD.GetComponent<HudController>().playerHealthBarControllers[i].show();
                 Transform t = Instantiate(samplePlayer);
                 t.GetComponent<PlayerMove>().joystickId = i + 1;
-                t.GetComponent<Animator>().runtimeAnimatorController = players[i];
+                t.GetComponent<Animator>().runtimeAnimatorController = players[i].GetComponent<Animator>().runtimeAnimatorController;
                 t.position = spawnpoints[i];
                 t.name = "Player " + i;
                 this.players[i] = t.gameObject;
