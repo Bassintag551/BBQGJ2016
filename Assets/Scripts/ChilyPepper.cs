@@ -3,6 +3,11 @@ using System.Collections;
 
 public class ChilyPepper : MonoBehaviour {
 	private bool activated = false;
+	private Animator anim;
+
+	void Start() {
+		anim = GetComponent<Animator>();
+	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		if(collider.GetComponent<Cutout>()) {
@@ -12,9 +17,9 @@ public class ChilyPepper : MonoBehaviour {
 
 	void FixedUpdate() {
 		if(!activated && GetComponent<Fall>() && GetComponent<Fall>().ready) {
-			GetComponent<Explosion>().enabled = true;
+			anim.SetTrigger("explode");
 			activated = true;
-			Destroy(gameObject, .1f);
+			Destroy(gameObject, .5f);
 		}
 	}
 }
