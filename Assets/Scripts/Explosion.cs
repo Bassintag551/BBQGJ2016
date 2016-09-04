@@ -19,6 +19,8 @@ public class Explosion : MonoBehaviour {
 			float percentage = (radius - Mathf.Sqrt(blow.x*blow.x + blow.y*blow.y)) / radius;
 
 			rigidbody.AddForce(blow * strength * percentage);
+
+			GetComponent<CircleCollider2D>().enabled = false;
 		}
 	}
 }
