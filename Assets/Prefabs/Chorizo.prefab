@@ -9,47 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000010507948322}
+  m_RootGameObject: {fileID: 1000012104780188}
   m_IsPrefabParent: 1
---- !u!1 &1000010507948322
+--- !u!1 &1000012104780188
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000013923910534}
-  - 212: {fileID: 212000011851282972}
-  - 114: {fileID: 114000012664687284}
-  - 114: {fileID: 114000010844708724}
-  - 58: {fileID: 58000014106455628}
-  - 114: {fileID: 114000011422498872}
+  - 4: {fileID: 4000012878521854}
+  - 212: {fileID: 212000013268528744}
+  - 58: {fileID: 58000013097212688}
+  - 114: {fileID: 114000012615461062}
+  - 114: {fileID: 114000012012609410}
   m_Layer: 0
-  m_Name: ChilyPepper
+  m_Name: Chorizo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000013923910534
+--- !u!4 &4000012878521854
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010507948322}
+  m_GameObject: {fileID: 1000012104780188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &58000014106455628
+--- !u!58 &58000013097212688
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010507948322}
+  m_GameObject: {fileID: 1000012104780188}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -57,51 +56,39 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.0001
---- !u!114 &114000010844708724
+  m_Radius: 1
+--- !u!114 &114000012012609410
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010507948322}
+  m_GameObject: {fileID: 1000012104780188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48dc8581b62b28c4385c18f4162ad2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f5057e064c98b04b8960e29e7c34ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000011422498872
+  shader: {fileID: 4800000, guid: c5eb42b5f56e5e349a7693d1cb3514be, type: 3}
+--- !u!114 &114000012615461062
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010507948322}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8126d56971d0c1041a29fff502545060, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  strength: 100
---- !u!114 &114000012664687284
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010507948322}
+  m_GameObject: {fileID: 1000012104780188}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd65288716a873e4788f06c2fcb90a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 5
+  duration: 2
   endScale: 0.5
   ready: 0
---- !u!212 &212000011851282972
+--- !u!212 &212000013268528744
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010507948322}
+  m_GameObject: {fileID: 1000012104780188}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -125,7 +112,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -154881121
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4beccad95a5319447a2261b8907982be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5ed282652b390940abe78e0ae558e1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
