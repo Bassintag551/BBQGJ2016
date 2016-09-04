@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  strength: 100
+  strength: 50
 --- !u!114 &114000012664687284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd65288716a873e4788f06c2fcb90a14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 5
-  endScale: 0.5
+  duration: 3
+  endScale: 0.65
   ready: 0
 --- !u!212 &212000011851282972
 SpriteRenderer:

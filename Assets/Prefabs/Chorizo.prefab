@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 2
-  endScale: 0.5
+  endScale: 1
   ready: 0
 --- !u!212 &212000013268528744
 SpriteRenderer:
